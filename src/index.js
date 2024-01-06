@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const userExperienceInput = document.getElementById('User-Experience-Input');
     const graphicInput = document.getElementById('graphic-Input');
 
-    // Navegación
+    // Navegation
     function chooseTopic() {
         console.log('topic');
         registerSection.classList.add('inactive');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         topicSection.classList.add('inactive');
         summarySection.classList.add('inactive');
     }
-
+//Register
     function userRegister() {
         const inputName = document.getElementById('inputName');
         const inputEmail = document.getElementById('email');
@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
     
         if (name === '' || email === '') {
             alert('Completa todos los campos para poder continuar.');
-            return false; // Detenemos la ejecución si los campos no están completos.
+            return false; 
         } else {
-            
-            return true; // Indicamos que los datos están completos.
+            alert('Completado ✅')
+            return true; 
         }
     }
     
@@ -82,14 +82,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Marcar el botón como seleccionado
+
     function markButtonAsSelected(button) {
         // Desmarcar otros botones
         softwareInput.classList.remove('selected');
         userExperienceInput.classList.remove('selected');
         graphicInput.classList.remove('selected');
 
-        // Marcar el botón actual
+
         button.classList.add('selected');
     }
 
@@ -113,11 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
     softwareInput.addEventListener('click', selectTopic);
     userExperienceInput.addEventListener('click', selectTopic);
     graphicInput.addEventListener('click', selectTopic);
-
-//funcion para validad que todos los datos esten completos y continuar a escoger topic 
-
-
-
 
 
     window.addEventListener('DOMContentLoaded', navigation, false);
