@@ -10,43 +10,62 @@
     <main class="background">
         <div class="background-efect"> 
             <div class="register-container inactive" id="register-container">
-            <h1 class="register-Title">Register</h1>
-            <form action="">
-                <label for="Name">Name</label>
-                    <input id="nombre" class="inputName" type="text" placeholder="Emily">
-             
-                <label  for="Email"> Email  </label>
-                    <input id="email" type="text" placeholder="example@gmail.com">
-            </form>
-            <button id="button"  >Continue</button>
-            <div class="progress-indicator">
-                <ul>
-                  <li class="completed"></li>
-                  <li></li>
-                  <li></li>
-                </ul></div>
-       
-              </div>
+                <h1 class="register-Title">Register</h1>
+                <form action="">
+                    <label for="Name">Name</label>
+                    <input id="inputName" class="inputName" type="text" placeholder="Emily">
+                    <label for="Email">Email</label>
+                    <input id="email" class="email" type="text" placeholder="example@gmail.com">
+                </form>
+                <button id="button-register" onclick="userRegister()">Continue</button>
+                <div class="progress-indicator">
+                    <ul>
+                        <li id="progress-register" class="completed"></li>
+                        <li id="progress-topic"></li>
+                        <li id="progress-summary"></li>
+                    </ul>
+                </div> 
+            </div>
+            
+            <section class="topic-section">
+                <div class="choose-Topic inactive" id="choose-Topic">
+                    <h1 class="quetions-Title">Which topics are you interested in? </h1>
+                    <input type="button" id="software-Input" value="Software Development">
+                    <input type="button" id="User-Experience-Input" value="User Experience">
+                    <input type="button" id="graphic-Input" value="Graphic Design">
+                    <button id="topic-btn" onclick="summary()">Continue</button>
+                    <div class="progress-indicator">
+                        <ul>
+                            <li id="progress-register"></li>
+                            <li id="progress-topic"  class="completed"></li>
+                            <li id="progress-summary"></li>
+                        </ul>
+                    </div> 
+                </div>
+                
+            </section>
+            <section class="summary-Section ">
+                <div class="summary-container inactive" id="summary-container">
+                    <h1 class="summary-Title">Summary</h1>
+                    <p class="summary-name" id="summary-name"></p>
+                    <p class="summary-email"  id="summary-email"></p>
+                    <h4 class="topic-subTitle">Topics</h4>
+                    <ul>
+                        <li id="summary-Topic"></li>
+                        <li></li>
+                    </ul>
+                    <button id="summary-btn">Continue</button>
+                    <div class="progress-indicator">
+                        <ul>
+                            <li id="progress-register"></li>
+                            <li id="progress-topic"></li>
+                            <li id="progress-summary" class="completed"></li>
+                        </ul>
+                    </div> 
+                </div>
+                
+            </section>
         </div>
-      <section>
-        <div class="choose-Topic " id="choose-Topic inactive">
-            <h1 class="quetions-Title">Which topics you are interested in? </h1>
-            <form action="">
-                <input id="choose-input ina" class="inputName" type="text" placeholder="Software Development">
-                <input id="choose-input" type="text" placeholder="User Experience">
-                <input id="choose-input"  type="text" placeholder="Graphic Design">
-            </form>
-            <button id="" >Continue</button>
-            <div class="progress-indicator">
-                <ul>
-                  <li id="progress" ></li>
-                  <li id="progress" class="completed"></li>
-                  <li id="progress" ></li>
-                </ul>
-              </div>
-        </div>
-      </section>
-          
     </main>
 
     <script src="./src/index.js"></script>
